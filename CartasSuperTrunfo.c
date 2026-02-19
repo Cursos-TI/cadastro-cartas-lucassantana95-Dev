@@ -104,7 +104,7 @@ int main(){
     printf("Super Poder: %.2f\n", SuperPoder2);
 
     //Comparação das cartas sendo 1 verdade, 0 falso;
-    printf("Resultado de Comparação das cartas são:\n");
+    printf("\nResultado de Comparação das cartas são:\n");
     printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
     printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
     printf("Pib: Carta 1 venceu (%d)\n", pib1 > pib2);
@@ -112,6 +112,20 @@ int main(){
     printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade_populacional1 < densidade_populacional2);
     printf("PIB per Capita: Carta 1 venceu (%d)\n", Pib_Per_Capita1 > Pib_Per_Capita2);
     printf("Super Poder: Carta 1 venceu (%d)\n", SuperPoder1 > SuperPoder2);
+
+    // --- Lógica de Comparação (Atributo: Pontos Turísticos) ---
+    // Regra: Maior valor vence
+
+    printf("\n Comparação de Cartas (Atributo: Pontos Turísticos) \n\n");
+
+    printf("Carta 1 - %s: %d pontos turísticos\n", cidade1, pontos1);
+    printf("Carta 2 - %s: %d pontos turísticos\n", cidade2, pontos2);
+
+    if (pontos1 > pontos2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    } else {
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    }
 
     return 0;
 }
