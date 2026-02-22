@@ -1,80 +1,43 @@
-# Desafio Super Trunfo - Países - Cadastro das Cartas
+🃏 Super Trunfo - Países (Desafio Mestre)
+Este projeto é um simulador de jogo de Super Trunfo desenvolvido em linguagem C como parte do desafio de lógica de programação. O objetivo é cadastrar cartas representando cidades/países e realizar batalhas interativas comparando múltiplos atributos.
 
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam as propriedades das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países," onde você comparará as propriedades das cidades.
+🚀 Funcionalidades
+O sistema evoluiu através de vários níveis de complexidade, atingindo as seguintes capacidades no estágio final:
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+Cadastro Completo: Inserção detalhada de dados como Estado, Código, Nome, População, Área, PIB e Pontos Turísticos.
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior. Você deve escolher qual desafio quer realizar.
+Cálculos Automáticos: O programa processa instantaneamente a Densidade Populacional e o PIB per Capita.
 
-### 🚨 Atenção: 
-O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções scanf para ler os dados e printf para exibi-los.
+Menu de Atributos Duplos: Interface interativa que permite ao jogador escolher dois critérios diferentes para a mesma batalha.
 
-## 🎮 Nível Novato
+Lógica de Comparação Complexa:
 
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades. 
+Regra Geral: O maior valor vence na maioria dos atributos.
 
-Cada país será dividido em oito estados, identificados pelas letras de A a H. Cada estado terá quatro cidades, numeradas de 1 a 4. A combinação da letra do estado e o número da cidade define o código da carta (por exemplo, A01, A02, B01, B02).
+Regra Inversa: No atributo Densidade Demográfica, a carta com o menor valor é a vencedora.
 
-### 🚩 Objetivo:
-- Criar cartas representando cidades, contendo as seguintes propriedades:
-  - **População**
-  - **Área**
-  - **PIB**
-  - **Número de pontos turísticos**
-  
-### ⚙️ Funcionalidades do Sistema:
-- O sistema permitirá ao usuário cadastrar cartas de cidades, inserindo manualmente os dados via terminal de comando.
-- Após o cadastro, o sistema exibirá os dados de cada cidade de forma clara e organizada.
+Operador Ternário: Utilizado para determinar e exibir o vencedor de cada round de forma elegante.
 
-### 📥 Entrada e 📤 Saída de Dados:
-- O usuário insere os dados de cada carta interativamente.
-- Após o cadastro, os dados são exibidos com todas as propriedades da cidade, uma por linha.
+Soma Final: O vencedor da partida é decidido pela maior soma dos dois atributos selecionados.
 
----
+🛠️ Tecnologias e Conceitos Aplicados
+Linguagem C: Base do desenvolvimento.
 
-## 🛡️ Nível Aventureiro
+Estruturas de Decisão: Uso intensivo de if-else aninhados e switch-case para menus dinâmicos.
 
-No nível Aventureiro, você expandirá o sistema para incluir propriedades calculadas, permitindo uma análise mais detalhada das cartas.
+Operadores Lógicos: Validação para impedir a escolha de atributos repetidos.
 
-### 🆕 Diferença em relação ao Nível Novato:
-- **Novas Propriedades Calculadas:**
-  - **Densidade Populacional:** População dividida pela área da cidade.
-  - **PIB per Capita:** PIB total dividido pela população.
+Manipulação de Dados: Uso de tipos como unsigned long int e float com casting para precisão nos cálculos.
 
-### ⚙️ Funcionalidades do Sistema:
-- O sistema agora calculará automaticamente a Densidade Populacional e o PIB per Capita com base nos dados inseridos.
-- Essas novas propriedades serão adicionadas às informações exibidas para cada cidade.
+📖 Como Rodar o Projeto
+Certifique-se de ter um compilador de C instalado (como o GCC).
 
-### 📥 Entrada e 📤 Saída de Dados:
-- O usuário continua inserindo os dados de cada carta interativamente.
-- O sistema exibirá os dados, incluindo as novas propriedades calculadas, de forma clara e organizada.
+Compile o arquivo:
 
----
+Bash
+gcc super_trunfo.c -o super_trunfo
+Execute o programa:
 
-## 🏆 Nível Mestre
-
-No nível Mestre, você implementará comparações entre as cartas, utilizando operadores relacionais e manipulando grandes números com precisão.
-
-### 🆕 Diferença em relação ao Nível Aventureiro:
-- **Comparação de Cartas:**
-  - O sistema permitirá ao usuário comparar duas cartas com base nas propriedades inseridas e calculadas.
-  - Cada carta terá um "Super Poder", que é a soma de todas as propriedades.
-  
-### ⚙️ Funcionalidades do Sistema:
-- O sistema utilizará operadores relacionais para determinar a carta vencedora com base nas propriedades comparadas.
-- A comparação considerará:
-  - **Densidade Populacional:** Vence a carta com menor valor.
-  - **Outras Propriedades:** Vence a carta com maior valor.
-- O resultado das comparações será exibido claramente para cada propriedade.
-
-### 📥 Entrada e 📤 Saída de Dados:
-- O usuário insere as cartas a serem comparadas.
-- O sistema exibe os resultados das comparações, indicando a carta vencedora para cada propriedade.
-
----
-
-Ao concluir todos os níveis, você terá criado um sistema incial para o jogo Super Trunfo, com funcionalidades de cadastro, cálculo e comparação de propriedades. 
-
-Boa sorte e divirta-se programando!
-
-Equipe de Ensino - MateCheck
+Bash
+./super_trunfo
+Siga as instruções no terminal para cadastrar as cartas e escolher os atributos da batalha.
